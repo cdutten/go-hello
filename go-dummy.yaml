@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-dummy
+  labels:
+    app: go-dummy
+spec:
+  selector:
+    matchLabels:
+      app: go-dummy
+  template:
+    metadata:
+      labels:
+        app: go-dummy
+    spec:
+      containers:
+        - name: go-dummy
+          image: cdutten/go-dummy:public
+          stdin: true
+          tty: true
