@@ -4,7 +4,7 @@ ARG workdir=/usr/src/app
 
 WORKDIR $workdir
 
-COPY ../../../.. .
+COPY . .
 
 ENV GOPATH=$workdir
 
